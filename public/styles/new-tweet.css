@@ -1,0 +1,57 @@
+.new-tweet {
+  width: 90%;
+  margin: auto;
+}
+
+.new-tweet h2 {
+  margin-left: 0;
+  padding-top: 20px;
+}
+
+/* tweet input box */
+#tweet-text {
+  padding-top: 20px;
+  height: 58px;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid rgb(58, 57, 57);
+  background-color: #f4f1ec;
+  resize: none;
+  font-weight: bold;
+  color:rgba(41, 40, 40, 0.836)
+}
+
+#tweet-text::placeholder {
+  font-weight: bold;
+  opacity: 70%;
+}
+
+/* removes the border when the user clicks into the input box */
+#tweet-text:focus {
+  outline: none;
+}
+
+.submit-new-tweet {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tweet-button {
+  border: none;
+  background-color: #4056A1;
+  font-family: 'Bungee';
+  color: white;
+  padding: 6px 12px;
+  font-size: 20px
+}
+
+.counter {
+  font-weight: bold;
+  font-family: 'Bungee';
+  font-size: 17px
+}
+
+
+
+
