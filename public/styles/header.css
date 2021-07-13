@@ -1,0 +1,13 @@
+header {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #e39c46;
+  background-image: url(http://www.transparenttextures.com/patterns/always-grey.png);
+}
+
+h2 {
+  margin: 8px;
+}
