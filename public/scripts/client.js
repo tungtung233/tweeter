@@ -1,29 +1,3 @@
-const data = [
-  {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png"
-      ,
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
-    },
-    "created_at": 1461116232227
-  },
-  {
-    "user": {
-      "name": "Descartes",
-      "avatars": "https://i.imgur.com/nlhLi3I.png",
-      "handle": "@rd" },
-    "content": {
-      "text": "Je pense , donc je suis"
-    },
-    "created_at": 1461113959088
-  }
-]
-
-
 $(document).ready(function () {
   
 
@@ -73,12 +47,10 @@ $(document).ready(function () {
 
     tweets.forEach(tweet => {
       $tweet = createTweetElement(tweet);
-      tweetsContainer.append($tweet)
+      tweetsContainer.prepend($tweet)
     })
 
   }
-
-  renderTweets(data)
 
   // intercepts the submit event from the 'tweet' button / form
   // prevents the button from doing it's default POST/refresh action - instead it submits the data as a query string using serialize
@@ -88,9 +60,32 @@ $(document).ready(function () {
 
     const data = $(this).serialize()
 
-    $.post("/tweets", data)
+    if (data.length > 145) {
+      alert("You have exceeded the maximum of 140 characters per tweet")
+    } else if (data.length === 5) {
+      alert("Please insert a message")
+    } else {
+      $.post("/tweets", data)
+      console.log("i am here")
+
+      loadTweets()
+    }
+    
   });
   
+
+
+  const loadTweets = function () {
+    $.ajax({
+      url:"http://localhost:8080/tweets",
+      method: "GET",
+    })
+    .then((res) => {
+      console.log("response:", res)
+      renderTweets(res)
+    })
+
+  }
   
 
 
