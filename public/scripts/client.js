@@ -80,7 +80,20 @@ $(document).ready(function () {
 
   renderTweets(data)
 
+  // intercepts the submit event from the 'tweet' button / form
+  // prevents the button from doing it's default POST/refresh action - instead it submits the data as a query string using serialize
+  // (fields are separated from their value by '=' and each pair is spearated from the next pair using '&')
+  $("form").on("submit", function(event) {
+    event.preventDefault();
+
+    const data = $(this).serialize()
+
+    $.post("/tweets", data)
+  });
   
+  
+
+
 });
 
 
