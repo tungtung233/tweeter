@@ -25,6 +25,8 @@ $(document).ready(function () {
     
     const {user, content, created_at} = tweetData;
 
+    const tweetDate = timeago.format(created_at)
+
     let html = 
     `<article>
 
@@ -43,7 +45,7 @@ $(document).ready(function () {
       <footer>
 
         <div class="tweetInfo">
-          <div class="tweetDate">${created_at}</div>
+          <div class="tweetDate">${tweetDate}</div>
           <div class="tweetOptions">
             <i class="fas fa-flag"></i>
             <i class="fas fa-retweet"></i>
