@@ -1,4 +1,4 @@
-.tweet-container {
+.tweets-container article {
   border: 3px solid rgb(99, 98, 98);
   border-radius: 20px;
   margin: auto;
@@ -8,7 +8,7 @@
   width: 90%;
 }
 
-.tweet-container header {
+.tweets-container header {
   align-items: flex-start;
   background-color: #f4f1ec;
   background-image: none;
@@ -19,13 +19,13 @@
   height: unset;
 }
 
-.tweet-container .avatar-userName {
+.tweets-container .avatar-userName {
   align-items: center;
   display: flex;
   flex-direction: row;
 }
 
-.tweet-container .userName {
+.tweets-container .userName {
   padding: 20px
 }
 
@@ -36,7 +36,7 @@ article p{
 }
 
 
-.tweet-container .oldTweet{
+.tweets-container .tweet{
   border-bottom: 3px solid black
 }
 
@@ -55,6 +55,6 @@ article p{
   color: #f80929;
 }
 
-.tweet-container:hover {
+.tweets-container article:hover {
   box-shadow: 5px 10px #888888;
 }
