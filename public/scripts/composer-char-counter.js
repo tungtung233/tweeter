@@ -14,11 +14,4 @@ $(document).ready(function() {
     } 
   
   })
-
-
-
-
-
-
-
 });

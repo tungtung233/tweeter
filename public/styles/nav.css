@@ -9,12 +9,12 @@ nav {
   z-index: auto;
 }
 
-span {
+nav span {
   font-family: 'Bungee', cursive;
   font-size: 40px
 }
 
-p {
+nav p {
   margin: 8px
 }
 
