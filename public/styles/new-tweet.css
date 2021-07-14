@@ -24,6 +24,7 @@
 #tweet-text::placeholder {
   font-weight: bold;
   opacity: 70%;
+  z-index: -1;
 }
 
 /* removes the border when the user clicks into the input box */
