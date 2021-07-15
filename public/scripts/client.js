@@ -1,6 +1,15 @@
 $(document).ready(function () {
   
 
+  // Cross-Site Scripting - this function ensures we aren't evaluating the text that is coming from the form submission 
+  // (e.g. some one could maliciously input code that wipes our database clean)
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
+  
   const createTweetElement = function (tweet) {
     
     const {user, content, created_at} = tweet;
@@ -12,20 +21,20 @@ $(document).ready(function () {
 
       <header>
         <div class="avatar-userName">
-          <img src=${user.avatars}>
-          <p class="userName">${user.name}</p>
+          <img src=${escape(user.avatars)}>
+          <p class="userName">${escape(user.name)}</p>
         </div>
         <div class="handle">
-          <p>${user.handle}</p>
+          <p>${escape(user.handle)}</p>
         </div>
       </header>
 
-      <p class="tweet">${content.text}</p>
+      <p class="tweet">${escape(content.text)}</p>
 
       <footer>
 
         <div class="tweetInfo">
-          <div class="tweetDate">${tweetDate}</div>
+          <div class="tweetDate">${escape(tweetDate)}</div>
           <div class="tweetOptions">
             <i class="fas fa-flag"></i>
             <i class="fas fa-retweet"></i>
@@ -40,7 +49,7 @@ $(document).ready(function () {
     return html;
   }
 
-  
+
   const renderTweets = function (tweets) {
     
     //empties out the tweets-container - so pre-existing tweets don't get prepended to it - starts with a clean slate
