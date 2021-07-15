@@ -26,5 +26,31 @@ main {
   width: 90%;
   margin: auto;
   background-color: #f4f1ec;
-
 }
+
+
+/* Tablets screen sizes upwards 768px upwards */
+@media only screen and (min-width: 1024px) {
+  #headerTweets {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #userProfile  {
+    width: 40%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 200px;
+  }
+
+  .container {
+    margin-top:120px;
+    width: 60%;
+  }
+
+  nav {
+    background-color: #4056A1;
+  }
+}
+
+
