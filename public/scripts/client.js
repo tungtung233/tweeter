@@ -82,8 +82,8 @@ $(document).ready(function () {
     const serializedMessage = $(this).serialize();
 
 
-    if (tweetMessage.length > 145) {
-      const errorMessage = `    <i class="fas fa-exclamation-circle"></i>  Tweets can be no longer than 140 characters!`
+    if (tweetMessage.length > 140) {
+      const errorMessage = `<i class="fas fa-exclamation-circle"></i>  Tweets can be no longer than 140 characters!`
       $("#error-message").append(errorMessage)
       
     } else if (tweetMessage.length === 0) {
@@ -100,7 +100,7 @@ $(document).ready(function () {
       })
     }
 
-    
+
   });
   
 
