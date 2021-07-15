@@ -40,10 +40,11 @@ $(document).ready(function () {
     return html;
   }
 
-
+  
   const renderTweets = function (tweets) {
     
-    const tweetsContainer = $('.tweets-container');
+    //empties out the tweets-container - so pre-existing tweets don't get prepended to it - starts with a clean slate
+    const tweetsContainer = $('.tweets-container').empty();
 
     tweets.forEach(tweet => {
       $tweet = createTweetElement(tweet);
@@ -56,6 +57,7 @@ $(document).ready(function () {
   // prevents the button from doing it's default POST/refresh action - instead it submits the data as a query string using serialize
   // (fields are separated from their value by '=' and each pair is spearated from the next pair using '&')
   $("form").on("submit", function(event) {
+    
     event.preventDefault();
 
     const data = $(this).serialize()
@@ -65,15 +67,13 @@ $(document).ready(function () {
     } else if (data.length === 5) {
       alert("Please insert a message")
     } else {
-      $.post("/tweets", data)
-      console.log("i am here")
-
-      loadTweets()
+      $.post("/tweets", data) 
+      .then((res) => {
+        loadTweets()
+      })
     }
-    
   });
   
-
 
   const loadTweets = function () {
     $.ajax({
@@ -84,10 +84,9 @@ $(document).ready(function () {
       console.log("response:", res)
       renderTweets(res)
     })
-
   }
   
-
+  loadTweets()
 
 });
 
