@@ -67,8 +67,14 @@
         <form action="/tweets" method="POST">
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div class="submit-new-tweet">
-            <button type="submit" class="tweet-button">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
+            <div id="new-tweet-submit-error">
+              <button type="submit" class="tweet-button">Tweet</button>
+              <span id="error-message"></span>
+            </div>
+
+            <div class="new-tweet-counter">
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
           </div>
         </form>
       </section>

@@ -58,3 +58,16 @@ article p{
 .tweets-container article:hover {
   box-shadow: 5px 10px #888888;
 }
+
+#new-tweet-submit-error {
+  align-items: center;
+  display: flex; 
+  font-style: italic;
+  font-weight: bold;
+  justify-content: space-between;
+}
+
+
+#error-message {
+  color: #f80929;
+}

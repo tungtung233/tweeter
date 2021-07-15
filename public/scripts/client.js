@@ -64,21 +64,41 @@ $(document).ready(function () {
 
   // intercepts the submit event from the 'tweet' button / form
   // prevents the button from doing it's default POST/refresh action - instead it submits the data as a query string using serialize
-  // (fields are separated from their value by '=' and each pair is spearated from the next pair using '&')
   $("form").on("submit", function(event) {
     
+    //ensures that spamming the submit button only produces one error message (not multiple errors appended to each other)
+    $('#error-message').empty()
+    
     event.preventDefault();
+    
+    
+    // this reads the exact input message from the form - not serialized 
+    // this way, we can accurately gauge the length of the tweet
+    const data = Object.fromEntries(new FormData(event.target).entries());
+    const tweetMessage = data['text']
 
-    const data = $(this).serialize()
+    // serializes the tweet message
+    // (fields are separated from their value by '=' and each pair is spearated from the next pair using '&')
+    const serializedMessage = $(this).serialize();
 
-    if (data.length > 145) {
-      alert("You have exceeded the maximum of 140 characters per tweet")
-    } else if (data.length === 5) {
-      alert("Please insert a message")
+    
+    if (tweetMessage.length > 145) {
+      const errorMessage = `<i class="fas fa-exclamation-circle"></i>  Tweets can be no longer than 140 characters!`
+      $("#new-tweet-submit-error").css({"width" : "53%"})
+      $("#error-message").append(errorMessage)
+      
+    } else if (tweetMessage.length === 0) {
+      const errorMessage = `<i class="fas fa-exclamation-circle"></i>  You didn't type anything!`
+      $("#new-tweet-submit-error").css({"width" : "35%"})
+      $("#error-message").append(errorMessage)
+
     } else {
-      $.post("/tweets", data) 
+      $.post("/tweets", serializedMessage) 
       .then((res) => {
-        loadTweets()
+
+        //clears the input form
+        this.reset();
+        loadTweets();
       })
     }
   });
@@ -90,11 +110,12 @@ $(document).ready(function () {
       method: "GET",
     })
     .then((res) => {
-      console.log("response:", res)
       renderTweets(res)
     })
   }
-  
+
+
+  // calling this function first so the page loads with the pre-existing tweets
   loadTweets()
 
 });
