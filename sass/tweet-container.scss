@@ -1,5 +1,7 @@
+@use 'base';
+
 .tweets-container article {
-  border: 3px solid #636262;
+  border: 3px solid rgb(99, 98, 98);
   border-radius: 20px;
   margin: auto;
   margin-bottom: 50px;
@@ -10,7 +12,7 @@
 
 .tweets-container header {
   align-items: flex-start;
-  background-color: #f4f1ec;
+  background-color: base.$main-background-colour;
   background-image: none;
   display: flex;
   flex-direction: row;
@@ -26,24 +28,25 @@
 }
 
 .tweets-container .userName {
-  padding: 20px;
+  padding: 20px
 }
 
-article p {
+article p{
   font-weight: bold;
-  overflow-wrap: break-word;
+  overflow-wrap: break-word; //this will wrap words around if they are short words, but break longer words up if they need to
   padding: 20px;
 }
 
-.tweets-container .tweet {
-  border-bottom: 3px solid black;
+
+.tweets-container .tweet{
+  border-bottom: 3px solid black
 }
 
 .tweetInfo {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 15px 30px;
+  margin: 15px 30px
 }
 
 .tweetOptions i {
@@ -51,7 +54,7 @@ article p {
 }
 
 .tweetOptions i:hover {
-  color: #f80929;
+  color: base.$red-highlights;
 }
 
 .tweets-container article:hover {
@@ -60,12 +63,13 @@ article p {
 
 #new-tweet-submit-error {
   align-items: center;
-  display: flex;
+  display: flex; 
   font-style: italic;
   font-weight: bold;
 }
 
+
 #error-message {
-  color: #f80929;
+  color: base.$red-highlights;
   padding-left: 30px;
 }

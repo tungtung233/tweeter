@@ -1,3 +1,5 @@
+@use 'base';
+
 .new-tweet {
   margin: auto;
   width: 90%;
@@ -10,10 +12,10 @@
 
 /* tweet input box */
 #tweet-text {
-  background-color: #f4f1ec;
+  background-color: base.$main-background-colour;
   border: none;
-  border-bottom: 2px solid #3a3939;
-  color: #545149;
+  border-bottom: 2px solid rgb(58, 57, 57);
+  color: base.$regular-font-color;
   font-weight: bold;
   height: 58px;
   padding-top: 20px;
@@ -40,15 +42,19 @@
 
 .tweet-button {
   border: none;
-  background-color: #4056A1;
-  font-family: "Bungee", cursive;
+  background-color: base.$blue-highlights;
+  font-family: base.$tweeter-font;
   color: white;
   padding: 6px 12px;
-  font-size: 20px;
+  font-size: 20px
 }
 
 .counter {
   font-weight: bold;
-  font-family: "Bungee", cursive;
+  font-family: base.$tweeter-font;
   font-size: 17px;
 }
+
+
+
+

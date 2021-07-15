@@ -1,3 +1,5 @@
+@use 'base';
+
 nav {
   color: #FFFFFF;
   display: flex;
@@ -12,12 +14,12 @@ nav {
 }
 
 nav span {
-  font-family: "Bungee", cursive;
-  font-size: 40px;
+  font-family: base.$tweeter-font;
+  font-size: 40px
 }
 
 nav p {
-  margin: 8px;
+  margin: 8px
 }
 
 .write-new-tweet {
@@ -27,32 +29,23 @@ nav p {
   justify-content: center;
 }
 
-.write-new-tweet:hover .fas.fa-angle-double-down {
+.write-new-tweet:hover .fas.fa-angle-double-down{
   animation-name: arrow-down;
   animation-duration: 4s;
   animation-iteration-count: infinite;
-  color: #f80929;
+  color: base.$red-highlights;
   position: relative;
 }
 
 @keyframes arrow-down {
-  0% {
-    top: 0px;
-  }
-  25% {
-    top: 12px;
-  }
-  50% {
-    top: 0px;
-  }
-  75% {
-    top: 12px;
-  }
-  100% {
-    top: 0px;
-  }
+  0%   {top: 0px}
+  25%  {top: 12px}
+  50%  {top: 0px}
+  75%  {top: 12px}
+  100% {top: 0px}
 }
-.write-new-tweet:hover p {
+
+.write-new-tweet:hover p{
   text-decoration: underline;
 }
 

@@ -1,6 +1,8 @@
+@use 'base';
+
 header {
   align-items: center;
-  background-color: #e39c46;
+  background-color: base.$userName-background;
   background-image: url(http://www.transparenttextures.com/patterns/always-grey.png);
   display: flex;
   flex-direction: column;

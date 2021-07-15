@@ -1,23 +1,27 @@
+@use 'base';
+
+
 html {
   box-sizing: border-box;
 }
-
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
+
 body {
-  color: #545149;
-  background-color: #f4f1ec;
+  color: base.$regular-font-color;
+  background-color: base.$main-background-colour;
   font-size: 24px;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: base.$regular-font;
 }
 
 main {
-  background-color: #f4f1ec;
+  background-color: base.$main-background-colour;
   margin: auto;
   width: 90%;
 }
+
 
 /* Tablets screen sizes upwards 768px upwards */
 @media only screen and (min-width: 1024px) {
@@ -26,7 +30,7 @@ main {
     flex-direction: row;
   }
 
-  #userProfile {
+  #userProfile  {
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 200px;
@@ -34,11 +38,13 @@ main {
   }
 
   .container {
-    margin-top: 120px;
+    margin-top:120px;
     width: 60%;
   }
 
   nav {
-    background-color: #4056A1;
+    background-color: base.$blue-highlights;
   }
 }
+
+
