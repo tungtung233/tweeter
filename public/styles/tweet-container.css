@@ -64,10 +64,10 @@ article p{
   display: flex; 
   font-style: italic;
   font-weight: bold;
-  justify-content: space-between;
 }
 
 
 #error-message {
   color: #f80929;
+  padding-left: 30px;
 }

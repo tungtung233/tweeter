@@ -47,3 +47,14 @@ nav p {
 .write-new-tweet:hover p{
   text-decoration: underline;
 }
+
+a.anchor {
+  position: relative;
+  top: -120px;
+}
+
+a.write-new-tweet {
+  color: unset;
+  text-decoration: unset;
+
+}

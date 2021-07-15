@@ -81,15 +81,13 @@ $(document).ready(function () {
     // (fields are separated from their value by '=' and each pair is spearated from the next pair using '&')
     const serializedMessage = $(this).serialize();
 
-    
+
     if (tweetMessage.length > 145) {
-      const errorMessage = `<i class="fas fa-exclamation-circle"></i>  Tweets can be no longer than 140 characters!`
-      $("#new-tweet-submit-error").css({"width" : "53%"})
+      const errorMessage = `    <i class="fas fa-exclamation-circle"></i>  Tweets can be no longer than 140 characters!`
       $("#error-message").append(errorMessage)
       
     } else if (tweetMessage.length === 0) {
       const errorMessage = `<i class="fas fa-exclamation-circle"></i>  You didn't type anything!`
-      $("#new-tweet-submit-error").css({"width" : "35%"})
       $("#error-message").append(errorMessage)
 
     } else {
