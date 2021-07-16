@@ -26,6 +26,11 @@ main {
     border-radius: 0.5em;
     padding-bottom: 0.6em;
   }
+
+  footer .fas.fa-chevron-circle-up {
+    padding-bottom: 0.4em;
+    padding-right: 0.4em;
+  }
 }
 /* computer screen sizes upwards 1024px upwards */
 @media only screen and (min-width: 1025px) {

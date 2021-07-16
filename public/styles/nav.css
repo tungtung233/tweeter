@@ -26,7 +26,7 @@ nav .write-new-tweet {
   flex-direction: column;
   justify-content: center;
 }
-nav .write-new-tweet:hover .fas.fa-angle-double-down {
+nav .fas.fa-angle-double-down {
   animation-name: arrow-down;
   animation-duration: 4s;
   animation-iteration-count: infinite;
@@ -53,13 +53,6 @@ nav .write-new-tweet:hover .fas.fa-angle-double-down {
 nav .write-new-tweet:hover p {
   text-decoration: underline;
 }
-
-a.write-new-tweet {
-  color: unset;
-  text-decoration: unset;
-}
-
-a.anchor {
-  position: relative;
-  top: -5em;
+nav .write-new-tweet:hover {
+  cursor: pointer;
 }

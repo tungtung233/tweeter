@@ -8,6 +8,14 @@ $(document).ready(function() {
       
       $(".fas.fa-chevron-circle-up").css({"visibility" : "visible"})
     }
+
+    else {
+
+      $(".write-new-tweet").css({"visibility" : "visible"})
+      
+      $(".fas.fa-chevron-circle-up").css({"visibility" : "hidden"})
+
+    }
   })
 
   $('.fas.fa-chevron-circle-up').on("click", function (event) {
@@ -18,12 +26,9 @@ $(document).ready(function() {
 
     event.preventDefault()
     $("#tweet-text").focus();
+
+    $(window).scrollTop(0);
   })
-
-
-
-
-
 
 
 });
