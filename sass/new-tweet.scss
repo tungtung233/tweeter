@@ -3,12 +3,13 @@
 .new-tweet {
   margin: auto;
   width: 90%;
+
+  h2 {
+    margin-left: 0;
+    padding-top: 20px;
+  }
 }
 
-.new-tweet h2 {
-  margin-left: 0;
-  padding-top: 20px;
-}
 
 /* tweet input box */
 #tweet-text {
@@ -21,19 +22,21 @@
   padding-top: 20px;
   resize: none;
   width: 100%;
+
+  &::placeholder {
+    font-weight: bold;
+    opacity: 70%;
+    z-index: -1;
+  }
+
+  /* removes the border when the user clicks into the input box */
+  &:focus {
+    outline: none;
+  }
 }
 
-#tweet-text::placeholder {
-  font-weight: bold;
-  opacity: 70%;
-  z-index: -1;
-}
 
-/* removes the border when the user clicks into the input box */
-#tweet-text:focus {
-  outline: none;
-}
-
+//flex container containing the tweet-button, potential error message, and the counter
 .submit-new-tweet {
   display: flex;
   justify-content: space-between;
@@ -46,7 +49,7 @@
   font-family: base.$tweeter-font;
   color: white;
   padding: 6px 12px;
-  font-size: 20px
+  font-size: 20px;
 }
 
 .counter {

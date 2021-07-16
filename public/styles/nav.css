@@ -10,31 +10,26 @@ nav {
   width: 100%;
   z-index: 1;
 }
-
 nav span {
   font-family: "Bungee", cursive;
   font-size: 40px;
 }
-
 nav p {
   margin: 8px;
 }
-
-.write-new-tweet {
+nav .write-new-tweet {
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
-.write-new-tweet:hover .fas.fa-angle-double-down {
+nav .write-new-tweet:hover .fas.fa-angle-double-down {
   animation-name: arrow-down;
   animation-duration: 4s;
   animation-iteration-count: infinite;
   color: #f80929;
   position: relative;
 }
-
 @keyframes arrow-down {
   0% {
     top: 0px;
@@ -52,16 +47,16 @@ nav p {
     top: 0px;
   }
 }
-.write-new-tweet:hover p {
+nav .write-new-tweet:hover p {
   text-decoration: underline;
-}
-
-a.anchor {
-  position: relative;
-  top: -120px;
 }
 
 a.write-new-tweet {
   color: unset;
   text-decoration: unset;
+}
+
+a.anchor {
+  position: relative;
+  top: -120px;
 }

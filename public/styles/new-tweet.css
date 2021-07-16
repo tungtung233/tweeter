@@ -2,7 +2,6 @@
   margin: auto;
   width: 90%;
 }
-
 .new-tweet h2 {
   margin-left: 0;
   padding-top: 20px;
@@ -19,15 +18,13 @@
   padding-top: 20px;
   resize: none;
   width: 100%;
+  /* removes the border when the user clicks into the input box */
 }
-
 #tweet-text::placeholder {
   font-weight: bold;
   opacity: 70%;
   z-index: -1;
 }
-
-/* removes the border when the user clicks into the input box */
 #tweet-text:focus {
   outline: none;
 }

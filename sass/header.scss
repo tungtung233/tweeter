@@ -1,6 +1,6 @@
 @use 'base';
 
-header {
+#userProfile {
   align-items: center;
   background-color: base.$userName-background;
   background-image: url(http://www.transparenttextures.com/patterns/always-grey.png);
@@ -8,8 +8,9 @@ header {
   flex-direction: column;
   height: 400px;
   justify-content: center;
+  
+  h2 {
+    margin: 8px;
+  }
 }
 
-h2 {
-  margin: 8px;
-}

@@ -19,7 +19,7 @@ main {
   width: 90%;
 }
 
-/* Tablets screen sizes upwards 768px upwards */
+/* computer screen sizes upwards 1024px upwards */
 @media only screen and (min-width: 1024px) {
   #headerTweets {
     display: flex;

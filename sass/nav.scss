@@ -11,50 +11,54 @@ nav {
   top: 0;
   width: 100%;
   z-index: 1;
+  
+  span {
+    font-family: base.$tweeter-font;
+    font-size: 40px;
+  }
+
+  p {
+    margin: 8px;
+  }
+
+  .write-new-tweet {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .write-new-tweet:hover .fas.fa-angle-double-down{
+    animation-name: arrow-down;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    color: base.$red-highlights;
+    position: relative;
+  }
+  
+  @keyframes arrow-down {
+    0%   {top: 0px}
+    25%  {top: 12px}
+    50%  {top: 0px}
+    75%  {top: 12px}
+    100% {top: 0px}
+  }
+  
+  .write-new-tweet:hover p{
+    text-decoration: underline;
+  }
+
 }
 
-nav span {
-  font-family: base.$tweeter-font;
-  font-size: 40px
-}
 
-nav p {
-  margin: 8px
-}
-
-.write-new-tweet {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.write-new-tweet:hover .fas.fa-angle-double-down{
-  animation-name: arrow-down;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-  color: base.$red-highlights;
-  position: relative;
-}
-
-@keyframes arrow-down {
-  0%   {top: 0px}
-  25%  {top: 12px}
-  50%  {top: 0px}
-  75%  {top: 12px}
-  100% {top: 0px}
-}
-
-.write-new-tweet:hover p{
-  text-decoration: underline;
-}
-
-a.anchor {
-  position: relative;
-  top: -120px;
-}
-
+// the "write a new tweet" link at the top was turning blue and underlined cus it is a hyperlink
 a.write-new-tweet {
   color: unset;
   text-decoration: unset;
+}
+
+
+a.anchor {
+  position: relative;
+  top: -120px; // need to offset the anchor because of the fixed nav bar
 }

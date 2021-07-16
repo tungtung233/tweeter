@@ -7,7 +7,14 @@
   padding: 20px;
   width: 90%;
 }
-
+.tweets-container article p {
+  font-weight: bold;
+  overflow-wrap: break-word;
+  padding: 20px;
+}
+.tweets-container article:hover {
+  box-shadow: 5px 10px #888888;
+}
 .tweets-container header {
   align-items: flex-start;
   background-color: #f4f1ec;
@@ -18,44 +25,28 @@
   justify-content: space-between;
   margin: 15px;
 }
-
 .tweets-container .avatar-userName {
   align-items: center;
   display: flex;
   flex-direction: row;
 }
-
 .tweets-container .userName {
   padding: 20px;
 }
-
-article p {
-  font-weight: bold;
-  overflow-wrap: break-word;
-  padding: 20px;
-}
-
 .tweets-container .tweet {
   border-bottom: 3px solid black;
 }
-
-.tweetInfo {
+.tweets-container .tweetInfo {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 15px 30px;
 }
-
-.tweetOptions i {
+.tweets-container .tweetOptions i {
   padding: 5px;
 }
-
-.tweetOptions i:hover {
+.tweets-container .tweetOptions i:hover {
   color: #f80929;
-}
-
-.tweets-container article:hover {
-  box-shadow: 5px 10px #888888;
 }
 
 #new-tweet-submit-error {

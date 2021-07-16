@@ -1,4 +1,4 @@
-header {
+#userProfile {
   align-items: center;
   background-color: #e39c46;
   background-image: url(http://www.transparenttextures.com/patterns/always-grey.png);
@@ -7,7 +7,6 @@ header {
   height: 400px;
   justify-content: center;
 }
-
-h2 {
+#userProfile h2 {
   margin: 8px;
 }

@@ -1,65 +1,70 @@
 @use 'base';
 
-.tweets-container article {
-  border: 3px solid rgb(99, 98, 98);
-  border-radius: 20px;
-  margin: auto;
-  margin-bottom: 50px;
-  margin-top: 50px;
-  padding: 20px;
-  width: 90%;
+.tweets-container {
+  article {
+    border: 3px solid rgb(99, 98, 98);
+    border-radius: 20px;
+    margin: auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    padding: 20px;
+    width: 90%;
+
+    p{
+      font-weight: bold;
+      overflow-wrap: break-word; //this will wrap words around if they are short words, but break longer words up if they need to
+      padding: 20px;
+    }
+  }
+
+  article:hover {
+    box-shadow: 5px 10px #888888;
+  }
+
+  header {
+    align-items: flex-start;
+    background-color: base.$main-background-colour;
+    background-image: none;
+    display: flex;
+    flex-direction: row;
+    height: unset;
+    justify-content: space-between;
+    margin: 15px;
+  }
+
+  .avatar-userName {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .userName {
+    padding: 20px;
+  }
+  
+  .tweet{
+    border-bottom: 3px solid black;
+  }
+
+  .tweetInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 15px 30px;
+  }
+
+  // action icons are spread out
+  .tweetOptions i {
+    padding: 5px;
+  }
+
+  .tweetOptions i:hover {
+    color: base.$red-highlights;
+  }
+
 }
 
-.tweets-container header {
-  align-items: flex-start;
-  background-color: base.$main-background-colour;
-  background-image: none;
-  display: flex;
-  flex-direction: row;
-  height: unset;
-  justify-content: space-between;
-  margin: 15px;
-}
 
-.tweets-container .avatar-userName {
-  align-items: center;
-  display: flex;
-  flex-direction: row;
-}
-
-.tweets-container .userName {
-  padding: 20px
-}
-
-article p{
-  font-weight: bold;
-  overflow-wrap: break-word; //this will wrap words around if they are short words, but break longer words up if they need to
-  padding: 20px;
-}
-
-
-.tweets-container .tweet{
-  border-bottom: 3px solid black
-}
-
-.tweetInfo {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 15px 30px
-}
-
-.tweetOptions i {
-  padding: 5px;
-}
-
-.tweetOptions i:hover {
-  color: base.$red-highlights;
-}
-
-.tweets-container article:hover {
-  box-shadow: 5px 10px #888888;
-}
 
 #new-tweet-submit-error {
   align-items: center;
