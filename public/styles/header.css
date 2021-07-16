@@ -4,9 +4,9 @@
   background-image: url(http://www.transparenttextures.com/patterns/always-grey.png);
   display: flex;
   flex-direction: column;
-  height: 400px;
+  height: 16em;
   justify-content: center;
 }
 #userProfile h2 {
-  margin: 8px;
+  margin: 0.1em;
 }

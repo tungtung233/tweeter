@@ -12,7 +12,7 @@ html {
 body {
   color: base.$regular-font-color;
   background-color: base.$main-background-colour;
-  font-size: 24px;
+  font-size: 1.5em;
   font-family: base.$regular-font;
 }
 
@@ -28,19 +28,18 @@ main {
 @media only screen and (min-width: 768px) and (max-width: 1024px)  {
   nav {
     span {
-    border-radius: 15px;
-    padding: 10px;
+    padding: 0.2em;
     text-shadow:
-      -2px -2px base.$grey-highlights,
-      2px -2px base.$grey-highlights,
-      -2px 2px base.$grey-highlights,
-      2px 2px base.$grey-highlights;
+      -0.1em -0.1em base.$grey-highlights,
+      0.1em -0.1em base.$grey-highlights,
+      -0.1em 0.1em base.$grey-highlights,
+      0.1em 0.1em base.$grey-highlights;
     }
 
     .write-new-tweet {
       background-color: rgba(base.$blue-highlights, 0.75);
-      border-radius: 15px;
-      padding-bottom: 20px;
+      border-radius: 0.5em;
+      padding-bottom: 0.6em;
     }
 
   }
@@ -55,14 +54,14 @@ main {
   }
 
   #userProfile  {
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 200px;
+    margin-left: 4%;
+    margin-top: 7.2em;
     width: 40%;
+    border-radius: 1em;
   }
 
   .container {
-    margin-top:120px;
+    margin-top: 5em;
     width: 60%;
   }
 

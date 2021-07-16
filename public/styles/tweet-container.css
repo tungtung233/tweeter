@@ -1,19 +1,19 @@
 .tweets-container article {
-  border: 3px solid #636262;
-  border-radius: 20px;
+  border: 0.15em solid #636262;
+  border-radius: 0.8em;
   margin: auto;
-  margin-bottom: 50px;
-  margin-top: 50px;
-  padding: 20px;
+  margin-bottom: 2em;
+  margin-top: 2em;
+  padding: 0.8em;
   width: 90%;
 }
 .tweets-container article p {
   font-weight: bold;
   overflow-wrap: break-word;
-  padding: 20px;
+  padding: 0.8em;
 }
 .tweets-container article:hover {
-  box-shadow: 5px 10px #888888;
+  box-shadow: 0.3em 0.4em #888888;
 }
 .tweets-container header {
   align-items: flex-start;
@@ -23,7 +23,7 @@
   flex-direction: row;
   height: unset;
   justify-content: space-between;
-  margin: 15px;
+  margin: 0.8em;
 }
 .tweets-container .avatar-userName {
   align-items: center;
@@ -31,19 +31,19 @@
   flex-direction: row;
 }
 .tweets-container .userName {
-  padding: 20px;
+  padding: 1em;
 }
 .tweets-container .tweet {
-  border-bottom: 3px solid black;
+  border-bottom: 0.15em solid black;
 }
 .tweets-container .tweetInfo {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 15px 30px;
+  margin: 0.5em 1em;
 }
 .tweets-container .tweetOptions i {
-  padding: 5px;
+  padding: 0.2em;
 }
 .tweets-container .tweetOptions i:hover {
   color: #f80929;
@@ -58,5 +58,6 @@
 
 #error-message {
   color: #f80929;
-  padding-left: 30px;
+  padding-left: 1.5em;
+  font-size: 0.8em;
 }

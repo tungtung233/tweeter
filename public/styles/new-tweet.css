@@ -4,18 +4,18 @@
 }
 .new-tweet h2 {
   margin-left: 0;
-  padding-top: 20px;
+  padding-top: 0.75em;
 }
 
 /* tweet input box */
 #tweet-text {
   background-color: #f4f1ec;
   border: none;
-  border-bottom: 2px solid #3a3939;
+  border-bottom: 0.15em solid #3a3939;
   color: #545149;
   font-weight: bold;
-  height: 58px;
-  padding-top: 20px;
+  height: 2.5em;
+  padding-top: 0.8em;
   resize: none;
   width: 100%;
   /* removes the border when the user clicks into the input box */
@@ -32,7 +32,7 @@
 .submit-new-tweet {
   display: flex;
   justify-content: space-between;
-  padding-top: 10px;
+  padding-top: 0.4em;
 }
 
 .tweet-button {
@@ -40,12 +40,12 @@
   background-color: #4056A1;
   font-family: "Bungee", cursive;
   color: white;
-  padding: 6px 12px;
-  font-size: 20px;
+  padding: 0.35em 0.7em;
+  font-size: 0.85em;
 }
 
 .counter {
   font-weight: bold;
   font-family: "Bungee", cursive;
-  font-size: 17px;
+  font-size: 0.7em;
 }

@@ -6,7 +6,7 @@
 
   h2 {
     margin-left: 0;
-    padding-top: 20px;
+    padding-top: 0.75em;
   }
 }
 
@@ -15,11 +15,11 @@
 #tweet-text {
   background-color: base.$main-background-colour;
   border: none;
-  border-bottom: 2px solid rgb(58, 57, 57);
+  border-bottom: 0.15em solid rgb(58, 57, 57);
   color: base.$regular-font-color;
   font-weight: bold;
-  height: 58px;
-  padding-top: 20px;
+  height: 2.5em;
+  padding-top: 0.8em;
   resize: none;
   width: 100%;
 
@@ -40,7 +40,7 @@
 .submit-new-tweet {
   display: flex;
   justify-content: space-between;
-  padding-top: 10px;
+  padding-top: 0.4em;
 }
 
 .tweet-button {
@@ -48,14 +48,14 @@
   background-color: base.$blue-highlights;
   font-family: base.$tweeter-font;
   color: white;
-  padding: 6px 12px;
-  font-size: 20px;
+  padding: 0.35em 0.7em;
+  font-size: 0.85em;
 }
 
 .counter {
   font-weight: bold;
   font-family: base.$tweeter-font;
-  font-size: 17px;
+  font-size: 0.7em;
 }
 
 

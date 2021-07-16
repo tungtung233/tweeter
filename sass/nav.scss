@@ -3,8 +3,8 @@
 nav {
   color: #FFFFFF;
   display: flex;
-  font-size: 24px;
-  height: 120px;
+  font-size: 1em;
+  height: 5em;
   justify-content: space-between;
   padding: 1.5em;
   position: fixed;
@@ -16,11 +16,11 @@ nav {
   
   span {
     font-family: base.$tweeter-font;
-    font-size: 40px;
+    font-size: 1.8em;
   }
 
   p {
-    margin: 8px;
+    margin: 0.3em;
   }
 
   .write-new-tweet {
@@ -39,11 +39,11 @@ nav {
   }
   
   @keyframes arrow-down {
-    0%   {top: 0px}
-    25%  {top: 12px}
-    50%  {top: 0px}
-    75%  {top: 12px}
-    100% {top: 0px}
+    0%   {top: 0em}
+    25%  {top: 0.5em}
+    50%  {top: 0em}
+    75%  {top: 0.5em}
+    100% {top: 0em}
   }
   
   .write-new-tweet:hover p{
@@ -62,5 +62,5 @@ a.write-new-tweet {
 
 a.anchor {
   position: relative;
-  top: -120px; // need to offset the anchor because of the fixed nav bar
+  top: -5em; // need to offset the anchor because of the fixed nav bar
 }

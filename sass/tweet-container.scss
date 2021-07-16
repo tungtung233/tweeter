@@ -2,23 +2,23 @@
 
 .tweets-container {
   article {
-    border: 3px solid rgb(99, 98, 98);
-    border-radius: 20px;
+    border: 0.15em solid rgb(99, 98, 98);
+    border-radius: 0.8em;
     margin: auto;
-    margin-bottom: 50px;
-    margin-top: 50px;
-    padding: 20px;
+    margin-bottom: 2em;
+    margin-top: 2em;
+    padding: 0.8em;
     width: 90%;
 
     p{
       font-weight: bold;
       overflow-wrap: break-word; //this will wrap words around if they are short words, but break longer words up if they need to
-      padding: 20px;
+      padding: 0.8em;
     }
   }
 
   article:hover {
-    box-shadow: 5px 10px #888888;
+    box-shadow: 0.3em 0.4em #888888;
   }
 
   header {
@@ -29,7 +29,7 @@
     flex-direction: row;
     height: unset;
     justify-content: space-between;
-    margin: 15px;
+    margin: 0.8em;
   }
 
   .avatar-userName {
@@ -39,23 +39,23 @@
   }
 
   .userName {
-    padding: 20px;
+    padding: 1em;
   }
   
   .tweet{
-    border-bottom: 3px solid black;
+    border-bottom: 0.15em solid black;
   }
 
   .tweetInfo {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 15px 30px;
+    margin: 0.5em 1em;
   }
 
   // action icons are spread out
   .tweetOptions i {
-    padding: 5px;
+    padding: 0.2em;
   }
 
   .tweetOptions i:hover {
@@ -76,5 +76,6 @@
 
 #error-message {
   color: base.$red-highlights;
-  padding-left: 30px;
+  padding-left: 1.5em;
+  font-size: 0.8em;
 }
