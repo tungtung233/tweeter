@@ -20,7 +20,20 @@ main {
 }
 
 /* computer screen sizes upwards 1024px upwards */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  nav span {
+    border-radius: 15px;
+    padding: 10px;
+    text-shadow: -2px -2px #3f3e3d, 2px -2px #3f3e3d, -2px 2px #3f3e3d, 2px 2px #3f3e3d;
+  }
+  nav .write-new-tweet {
+    background-color: rgba(64, 86, 161, 0.75);
+    border-radius: 15px;
+    padding-bottom: 20px;
+  }
+}
+/* computer screen sizes upwards 1024px upwards */
+@media only screen and (min-width: 1025px) {
   #headerTweets {
     display: flex;
     flex-direction: row;
