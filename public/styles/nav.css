@@ -25,6 +25,7 @@ nav .write-new-tweet {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  visibility: hidden;
 }
 nav .fas.fa-angle-double-down {
   animation-name: arrow-down;
