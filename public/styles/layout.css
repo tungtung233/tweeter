@@ -19,12 +19,8 @@ main {
   width: 90%;
 }
 
-/* computer screen sizes upwards 1024px upwards */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-  nav span {
-    padding: 0.2em;
-    text-shadow: -0.1em -0.1em #3f3e3d, 0.1em -0.1em #3f3e3d, -0.1em 0.1em #3f3e3d, 0.1em 0.1em #3f3e3d;
-  }
+/* computer screen sizes with max width of 1024px */
+@media only screen and (max-width: 1024px) {
   nav .write-new-tweet {
     background-color: rgba(64, 86, 161, 0.75);
     border-radius: 0.5em;

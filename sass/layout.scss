@@ -24,18 +24,11 @@ main {
 }
 
 
-/* computer screen sizes upwards 1024px upwards */
-@media only screen and (min-width: 768px) and (max-width: 1024px)  {
-  nav {
-    span {
-    padding: 0.2em;
-    text-shadow:
-      -0.1em -0.1em base.$grey-highlights,
-      0.1em -0.1em base.$grey-highlights,
-      -0.1em 0.1em base.$grey-highlights,
-      0.1em 0.1em base.$grey-highlights;
-    }
 
+
+/* computer screen sizes with max width of 1024px */
+@media only screen and (max-width: 1024px)  {
+  nav {
     .write-new-tweet {
       background-color: rgba(base.$blue-highlights, 0.75);
       border-radius: 0.5em;

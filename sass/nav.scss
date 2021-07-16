@@ -17,6 +17,13 @@ nav {
   span {
     font-family: base.$tweeter-font;
     font-size: 1.8em;
+    padding: 0.2em;
+    text-shadow:
+      -0.1em -0.1em base.$grey-highlights,
+      0.1em -0.1em base.$grey-highlights,
+      -0.1em 0.1em base.$grey-highlights,
+      0.1em 0.1em base.$grey-highlights;
+    
   }
 
   p {
