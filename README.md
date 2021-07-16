@@ -6,6 +6,17 @@ This single page app was built with HTML, CSS, JS, jQuery and AJAX on the client
 
 ## Final Product
 
+*Top of the page where you can submit new tweets! (large screen)*
+!["Top of the page where you can submit new tweets! (large screen)"](https://raw.githubusercontent.com/tungtung233/tweeter/master/docs/large-screen-page-top.png)  
+
+*Scrolling through other people's tweets (large screen) - there are buttons on the side that take you back to the top of the page or to the 'new-tweet' input bar.*
+!["Scrolling through other people's tweets (large screen)"](https://raw.githubusercontent.com/tungtung233/tweeter/master/docs/large-screen-tweets.png)  
+
+*Top of the page (small screen) - there are limits on how many characters a tweet can contain*
+!["Top of the page (small screen)"](https://raw.githubusercontent.com/tungtung233/tweeter/master/docs/small-screen-page-top.png)  
+
+*Scrolling through other people's tweets (small screen)*
+!["Scrolling through other people's tweets (small screen)"](https://raw.githubusercontent.com/tungtung233/tweeter/master/docs/small-screen-tweets.png)  
 
 
 ## Dependencies
@@ -25,6 +36,6 @@ This single page app was built with HTML, CSS, JS, jQuery and AJAX on the client
 4. Go to <http://localhost:8080/> in your browser.
 5. Start posting your own tweets! 
 
-Enjoy~
+**Enjoy~**
 
 
