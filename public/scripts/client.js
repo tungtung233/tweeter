@@ -70,27 +70,24 @@ $(document).ready(function () {
     $('#error-message').empty()
     
     event.preventDefault();
-    
-    
+
     // this reads the exact input message from the form - not serialized 
     // this way, we can accurately gauge the length of the tweet
-    const data = Object.fromEntries(new FormData(event.target).entries());
-    const tweetMessage = data['text']
-
-    // serializes the tweet message
-    // (fields are separated from their value by '=' and each pair is spearated from the next pair using '&')
-    const serializedMessage = $(this).serialize();
-
-
-    if (tweetMessage.length > 140) {
+    const value = $('#tweet-text').val()
+    
+    if (value.length > 140) {
       const errorMessage = `<i class="fas fa-exclamation-circle"></i>  Tweets can be no longer than 140 characters!`
       $("#error-message").append(errorMessage)
       
-    } else if (tweetMessage.length === 0) {
+    } else if (value.length === 0) {
       const errorMessage = `<i class="fas fa-exclamation-circle"></i>  You didn't type anything!`
       $("#error-message").append(errorMessage)
-
+      
     } else {
+      // serializes the tweet message
+      // (fields are separated from their value by '=' and each pair is spearated from the next pair using '&')
+      const serializedMessage = $(this).serialize();
+
       $.post("/tweets", serializedMessage) 
       .then((res) => {
 
